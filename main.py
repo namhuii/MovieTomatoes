@@ -9,6 +9,7 @@
 # 만든이: namhui
 # 일자: 2021.11.09
 
+import math
 import requests
 from bs4 import BeautifulSoup
 import webcrawl.WebCrawlService as wcs
@@ -25,10 +26,12 @@ movie_code = '209496' # 네이버 영화 code
 title = wcs.get_movie_title(movie_code)
 print(title)
 
+# 2.전체 페이지 수 계산
+pages = wcs.calc_pages(movie_code)  #함수는 호출해야 한다 !
+print(pages)
 
-
-
-
+# 3.리뷰 수집
+wcs.get_reviews(movie_code, pages, title)
 
 
 ################
