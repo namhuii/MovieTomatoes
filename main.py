@@ -31,7 +31,7 @@ pages = wcs.calc_pages(movie_code)  #함수는 호출해야 한다 !
 print(pages)
 
 # 3.리뷰 수집
-wcs.get_reviews(movie_code, pages, title)
+# wcs.get_reviews(movie_code, pages, title)
 
 
 ################
